@@ -1,0 +1,44 @@
+<div class="layout-modal-header">
+    <div class="layout-modal-title" translate="LAYOUT_VIEW_PAGES_APPLY_TEMPLATE_TITLE"></div>
+    <div ng-click="ctrl.dismiss()" class="layout-btn-close">&times;</div>
+    <div class="layout-modal-body">
+		<div class="filter-Line">
+			{{::'CHANNEL_LABEL' | translate}}
+			<select ng-options="channel.id as channel.name for channel in ctrl.channels" ng-model="ctrl.channel"></select>
+      		{{::'SEARCH_LABEL' | translate}} 
+      		<input type="text" ng-model="ctrl.search.templateSearch" ng-model-options="{updateOn: 'default blur',debounce: {default: 500, blur: 0}, getterSetter: true, allowInvalid: true}">
+	        <span ng-disabled="ctrl.search.disabled" ng-click="ctrl.loadTemplates()" class="layout-btn" translate="SEARCH_BUTTON_LABEL"></span> 
+		</div>
+    </div>
+    <div class="layout-modal-body">
+        <div>
+        	{{::'LAYOUT_VIEW_PAGES_NAME_COLUMN'|translate}}:&nbsp;
+            {{::ctrl.name}}
+        	{{::'LAYOUT_VIEW_PAGES_HEIGHT_COLUMN'|translate}}:&nbsp;
+            {{::ctrl.h}}
+        	{{::'LAYOUT_VIEW_PAGES_WIDTH_COLUMN'|translate}}:&nbsp;
+            {{::ctrl.w}}
+        </div>
+   </div>
+    <div class="layout-modal-body">
+        <div ng-show="ctrl.totalRecords > 0" class="layout-view-pagination-control">
+            <span class="hyperlink" ng-click="ctrl.getPreviousPage(ctrl.numPerPage)">&lt;</span>
+            <span class="hyperlink" ng-click="ctrl.getNextPage(ctrl.numPerPage)">&gt;</span>
+<!--             <span class="hyperlink" ng-click="ctrl.getPreviousPage(ctrl.numPerPage)"><i class="glyphicon glyphicon-chevron-left"></i></span>
+            <span class="hyperlink" ng-click="ctrl.getNextPage(ctrl.numPerPage)"><i class="glyphicon glyphicon-chevron-right" ></i></span>
+ -->            <span>{{ctrl.offset}} &#45; {{ctrl.limit}} of {{ctrl.totalRecords}}</span>
+        </div>
+    
+	    <div class="radio" ng-repeat="template in ctrl.templates">
+	      	<label>
+	        	<input type="radio" name="template" ng-click="ctrl.handleRadioClick(template)">{{::template.name}}
+	      	</label>
+    		{{::template.lastUsedDate | date:ctrl.dateFormat}}
+            <span thumbnail-canvas-renderer block-list="template.blockList"></span>
+	    </div>
+    </div>
+    <div class="layout-modal-footer">
+        <button ng-click="ctrl.dismiss()" class="layout-btn layout-btn-cancel" translate="LAYOUT_VIEW_MODAL_BUTTON_CLOSE"></button> 
+        <button ng-disabled="ctrl.disabled" ng-click="ctrl.apply()" class="layout-btn" translate="LAYOUT_VIEW_MODAL_BUTTON_OK"></button> 
+    </div>
+</div>

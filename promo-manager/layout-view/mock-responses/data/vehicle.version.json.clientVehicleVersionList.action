@@ -1,0 +1,37 @@
+{"data":
+  {
+    "data": [
+      {
+        "actualValues": {},
+        "channelId": 0,
+        "deleteLayoutRight": false,
+        "duplicateVersion": false,
+        "editLayoutRight": false,
+        "id": 27334,
+        "name": "Base",
+        "originalDuplicateVersionId": 0,
+        "parentId": -1,
+        "planValues": {},
+        "vehicleId": 5328
+      },
+      {
+        "actualValues": {},
+        "channelId": 0,
+        "deleteLayoutRight": false,
+        "duplicateVersion": false,
+        "editLayoutRight": false,
+        "id": 27399,
+        "name": "V1",
+        "originalDuplicateVersionId": 0,
+        "parentId": -1,
+        "planValues": {},
+        "vehicleId": 5328
+      }
+
+    ],
+    "dataAsString": "[{\"deleteLayoutRight\":false,\"editLayoutRight\":false,\"channelId\":0,\"vehicleId\":5328,\"parentId\":-1,\"actualValues\":{},\"planValues\":{},\"originalDuplicateVersionId\":0,\"isDuplicateVersion\":false,\"id\":27334,\"name\":\"Base\"}]",
+    "fileId": 0,
+    "id": 0,
+    "success": true
+  }
+}

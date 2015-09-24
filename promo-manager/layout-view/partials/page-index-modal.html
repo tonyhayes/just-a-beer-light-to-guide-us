@@ -1,0 +1,20 @@
+<div class="layout-modal-header">
+    <div class="layout-modal-title" translate="LAYOUT_VIEW_PAGE_INDEX_TITLE"></div>
+    <div ng-click="ctrl.dismiss()" class="layout-btn-close">&times;</div>
+    <div class="layout-modal-body">
+        <table class="table table-striped table-condensed table-hover">
+            <tr>
+                <th translate="LAYOUT_VIEW_PAGES_PAGE_COLUMN"></th>
+                <th translate="LAYOUT_VIEW_PAGES_GRID_COLUMN"></th>
+            </tr>
+            <tr ng-repeat="row in ctrl.grid">
+                <td><input class="small-input" ng-model="row.index"></td>
+                <td><input readonly ng-model="row.name"></td>
+           </tr>        
+        </table>
+    </div>
+    <div class="layout-modal-footer">
+        <span ng-click="ctrl.dismiss()" class="layout-btn layout-btn-cancel" translate="LAYOUT_VIEW_MODAL_BUTTON_CLOSE"></span> 
+        <span ng-click="ctrl.apply()" class="layout-btn" translate="LAYOUT_VIEW_MODAL_BUTTON_OK"></span> 
+    </div>
+</div>

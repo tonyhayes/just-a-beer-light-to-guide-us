@@ -1,0 +1,153 @@
+@layoutViewViewportBackground: #ffffff;
+@layoutViewBlockBorderColor: gold;
+@layoutViewPageBorderColor: blue;
+@layoutViewPageGripBorderColor: blue;
+@layoutViewPageBackgroundColor: rgba(200, 200, 200, 0.8);
+@layoutViewCardBorderColor: red;
+@layoutViewCardBackgroundColor: rgba(100, 100, 100, 0.8);
+@layoutViewContextMenuFontFamily: "HelveticaNeue","Helvetica Neue",Helvetica,Arial,sans-serif;
+@layoutViewContextMenuColor: #333;
+@layoutViewContextMenuBackgroundCurrentItem: #ddd;
+@layoutViewContextMenuBackgroundCurrentItemHover: #f6f6f6;
+@layoutViewDisabledColor: grey;
+@layoutViewDisabledBackgroundColor: rgba(0, 0, 0, 0.2);
+@layoutViewPageGripBackgroundColor: rgba(300, 300, 300, 0.9);
+@layoutViewBlockGripBorderColor: @layoutViewPageGripBorderColor;
+@layoutViewBlockGripBackgroundColor: @layoutViewPageGripBackgroundColor;
+@layoutViewOfferGripBorderColor: @layoutViewPageGripBorderColor;
+@layoutViewOfferGripBackgroundColor: @layoutViewPageGripBackgroundColor;
+@gripMenuItemsBackgroundColor: white;
+@searchItemBackgroundColor: #E1EDFA;
+@selectedItemBackgroundColor: #b4bdc8;
+@themePilotFishFontColorBlue: blue;
+
+[ng-cloak] {
+	display: none;
+}
+
+//
+// Variables for modal
+// ----------------------
+
+@gray: #333;
+@gray-light: #aaa;
+@gray-lighter: #eee;
+@space: 40px;
+@ok: #428bca;
+@ok-dark: darken(@ok, 5%);
+@cancel: #42CAC5;
+@cancel-dark: darken(@cancel, 5%);
+
+
+// Theme styles
+
+
+
+//
+// Btn 
+// ----------------------
+
+.layout-btn{
+    background: @ok;
+    border: @ok-dark solid 1px;
+    border-radius: 3px;
+    color: #fff;
+    display: inline-block;
+    font-size: 14px;
+    padding: 8px 15px;
+    text-decoration: none;
+    text-align: center;
+    min-width: 60px;
+    position: relative;
+    cursor: pointer;
+  
+    &:hover{
+        text-decoration: underline;
+        background: @ok-dark;
+    }
+  
+    &.layout-btn-big{
+        font-size: 18px;
+        padding: 15px 20px;
+        min-width: 100px;
+    }
+    &.layout-btn-cancel{
+        background: @cancel;
+        border: @cancel-dark solid 1px;
+        &:hover{
+            background: @cancel-dark;
+        }
+
+    }
+  
+}
+
+.layout-btn-close{
+    color: @gray-light;
+    font-size: 30px;
+    text-decoration: none;
+    position: absolute; right: 5px; top: 0;
+    cursor: pointer;
+  
+    &:hover{
+        color: darken(@gray-light, 10%);
+        text-decoration: underline;
+    }
+  
+}
+.layout-btn-delete{
+    color: @gray-light;
+    font-size: 17px;
+    text-decoration: none;
+  
+    &:hover{
+        color: darken(@gray-light, 10%);
+    }
+  
+}
+
+//
+// Modal
+// ----------------------
+
+
+
+.layout-modal-body{
+    padding: @space/2;
+}
+.layout-modal-title{
+    font-size: 20px;
+}
+
+.layout-modal-header,
+.layout-modal-footer{
+    padding: @space/4 @space/2;
+}
+
+.layout-modal-header{
+    border-bottom: @gray-lighter solid 1px;
+  
+    h2{
+        font-size: 20px;
+    }
+  
+}
+
+.layout-modal-footer{
+    border-top: @gray-lighter solid 1px;
+    text-align: right;
+}
+.hyperlink {
+    color: @themePilotFishFontColorBlue;
+    text-decoration: underline;
+    cursor: pointer;
+    &:hover{
+        color: darken(@themePilotFishFontColorBlue, 10%);
+    }
+
+}
+
+.clickable {
+    cursor: pointer;
+}
+

@@ -1,0 +1,1 @@
+module.exports = require("npm:ng-tasty@0.5.6/ng-tasty");

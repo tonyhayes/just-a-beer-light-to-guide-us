@@ -1,0 +1,58 @@
+{
+  "name": "ng-tasty",
+  "version": "0.5.6",
+  "description": "A lightweight, flexible, and tasty collection of reusable UI components for AngularJS.",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Zizzamia/ng-tasty.git"
+  },
+  "keywords": [
+    "angular",
+    "angularjs",
+    "tasty",
+    "components",
+    "table",
+    "throttle",
+    "webSocket",
+    "slugify",
+    "camelize"
+  ],
+  "author": {
+    "name": "Leonardo Zizzamia",
+    "url": "https://github.com/Zizzamia"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Zizzamia/ng-tasty/issues"
+  },
+  "homepage": "https://github.com/Zizzamia/ng-tasty",
+  "gitHead": "d25ec22953123134e492e8dd6c35e4bb98037e26",
+  "_id": "ng-tasty@0.5.6",
+  "scripts": {},
+  "_shasum": "bc3a8826d7014a4a275e0c525e196ddc14afc389",
+  "_from": ".",
+  "_npmVersion": "1.4.28",
+  "_npmUser": {
+    "name": "zizzamia",
+    "email": "leonardo.zizzamia@gmail.com"
+  },
+  "maintainers": [
+    {
+      "name": "zizzamia",
+      "email": "leonardo.zizzamia@gmail.com"
+    }
+  ],
+  "dist": {
+    "shasum": "bc3a8826d7014a4a275e0c525e196ddc14afc389",
+    "tarball": "http://registry.npmjs.org/ng-tasty/-/ng-tasty-0.5.6.tgz"
+  },
+  "format": "cjs",
+  "ignore": [
+    "node_modules"
+  ],
+  "registry": "npm",
+  "dependencies": {
+    "process": "github:jspm/nodelibs-process@^0.1.0"
+  }
+}

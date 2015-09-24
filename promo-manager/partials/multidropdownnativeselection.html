@@ -1,0 +1,8 @@
+<div ng-repeat="dropdown in ctrl.dropdowns">
+	<select ng-options="option.id as option.name for option in dropdown"
+	  ng-disabled="disableSelection"
+	  ng-model="ctrl.shadowModel[$index]"
+	  ng-change="ctrl.updateModel(ctrl.shadowModel[$index])"
+	>
+	</select>
+</div>

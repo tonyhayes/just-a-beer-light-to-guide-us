@@ -1,0 +1,86 @@
+{
+    "data":{
+        "data": {
+            "layout": {
+                "channelId": 7,
+                "checkOutBy": 0,
+                "currentPageQty": 4,
+                "id": 1128,
+                "layoutVersionsMap": {
+                    "1": [1092, 1089, 1090, 1091],
+                    "2": [1086],
+                    "3": [1093, 1094, 1095],
+                    "4": [1087, 1088]
+                },
+                "pageGroupsMap": {},
+                "permittedActions":{
+                    "add-page":"Add page",
+                    "re-order":"Re-order page",
+                },    
+                "pageList": [{
+                    "id": 249,
+                    "layout": {
+                        "channelId": 0,
+                        "checkOutBy": 0,
+                        "currentPageQty": 0,
+                        "id": 1128,
+                        "layoutVersionsMap": {},
+                        "pageGroupsMap": {},
+                        "pageList": []
+                    },
+                    "position": 1
+                }, {
+                    "id": 266,
+                    "layout": {
+                        "channelId": 0,
+                        "checkOutBy": 0,
+                        "currentPageQty": 0,
+                        "id": 1128,
+                        "layoutVersionsMap": {},
+                        "pageGroupsMap": {},
+                        "pageList": []
+                    },
+                    "position": 2,
+                    "x": null,
+                    "y": null,
+                    "z": null
+                }, {
+                    "id": 267,
+                    "layout": {
+                        "channelId": 0,
+                        "checkOutBy": 0,
+                        "currentPageQty": 0,
+                        "id": 1128,
+                        "layoutVersionsMap": {},
+                        "pageGroupsMap": {},
+                        "pageList": []
+                    },
+                    "position": 4,
+                    "x": 300.0,
+                    "y": 400.0,
+                    "z": 2.0
+                }, {
+                    "id": 271,
+                    "spread": {
+                        "id": 1
+                    },
+                    "layout": {
+                        "channelId": 0,
+                        "checkOutBy": 0,
+                        "currentPageQty": 0,
+                        "id": 1128,
+                        "layoutVersionsMap": {},
+                        "pageGroupsMap": {},
+                        "pageList": []
+                    },
+                    "position": 3,
+                    "x": 500.0,
+                    "y": 600.0,
+                    "z": 1.0
+                }]
+            }
+        },
+        "fileId": 0,
+        "success": true
+    }
+}

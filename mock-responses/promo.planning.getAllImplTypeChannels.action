@@ -1,0 +1,80 @@
+{
+  "data": {
+    "promoImplTypeChannelsList": [
+      {
+        "changeLogTypeList": null,
+        "channelType": null,
+        "codeName": "broadsheet",
+        "color": null,
+        "description": null,
+        "id": 103,
+        "name": "Broadsheet",
+        "scheme": null,
+        "status": null
+      },
+      {
+        "changeLogTypeList": null,
+        "channelType": null,
+        "codeName": "circular",
+        "color": null,
+        "description": null,
+        "id": 2,
+        "name": "Flyer",
+        "scheme": null,
+        "status": null
+      },
+      {
+        "changeLogTypeList": null,
+        "channelType": null,
+        "codeName": "catalog",
+        "color": null,
+        "description": null,
+        "id": 3,
+        "name": "Digest",
+        "scheme": null,
+        "status": null
+      },
+      {
+        "changeLogTypeList": null,
+        "channelType": null,
+        "codeName": "cpp",
+        "color": null,
+        "description": null,
+        "id": 101,
+        "name": "CPP",
+        "scheme": null,
+        "status": null
+      },
+      {
+        "changeLogTypeList": null,
+        "channelType": null,
+        "codeName": "email",
+        "color": null,
+        "description": null,
+        "id": 34,
+        "name": "Email",
+        "scheme": null,
+        "status": null
+      },
+           {
+        "changeLogTypeList": null,
+        "channelType": null,
+        "codeName": "tony",
+        "color": null,
+        "description": null,
+        "id": 349,
+        "name": "tony",
+        "scheme": null,
+        "status": null
+      }
+
+    ]
+  },
+  "dataAsString": "{\"promoImplTypeChannelsList\":[{\"codeName\":\"broadsheet\",\"id\":103,\"name\":\"Broadsheet\"},{\"codeName\":\"circular\",\"id\":2,\"name\":\"Flyer\"},{\"codeName\":\"catalog\",\"id\":3,\"name\":\"Digest\"},{\"codeName\":\"cpp\",\"id\":101,\"name\":\"CPP\"},{\"codeName\":\"email\",\"id\":34,\"name\":\"Email\"}]}",
+  "fileId": 0,
+  "id": 0,
+  "message": null,
+  "messageKeys": null,
+  "name": null,
+  "success": true
+}

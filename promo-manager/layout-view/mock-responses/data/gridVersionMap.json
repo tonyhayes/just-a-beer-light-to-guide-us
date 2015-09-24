@@ -1,0 +1,146 @@
+{
+    "data":{
+        "data": {
+            "gridVersionMap": {
+                "288": {
+                    "blockGroupMap": {},
+                    "permittedActions":{
+                        "add-to-basket":"Add to Basket",
+                        "dnd-create-version":null,
+                        "dnd-to-ab":null,
+                        "dnd-to-pl-ob":null,
+                        "allocate":null,
+                        "dnd-ab-to-pl":null,
+                        "upload":null,
+                        "plan":"Plan",
+                        "edit-allocation":"Edit Allocation",
+                        "edit-theme":null
+                    },    
+                    "description": "G1",
+                    "id": 291,
+                    "merchandiseHierarchyList": [],
+                    "name": "Page 7",
+                    "pageHeight": 11,
+                    "pageWidth": 8.5,
+                    "unit": 1,
+                    "versionMarketIdList": [
+                        1086,
+                        1087,
+                        1088,
+                        1089,
+                        1090,
+                        1091,
+                        1092,
+                        1093,
+                        1094,
+                        1095
+                    ]
+                },
+                "289": {
+                    "blockGroupMap": {},
+                    "permittedActions":{
+                        "add-to-basket":"Add to Basket",
+                        "dnd-create-version":null,
+                        "dnd-to-ab":null,
+                        "dnd-to-pl-ob":null,
+                        "allocate":null,
+                        "dnd-ab-to-pl":null,
+                        "upload":null,
+                        "plan":"Plan",
+                        "edit-allocation":"Edit Allocation",
+                        "edit-theme":null
+                    },    
+                    "description": "Base",
+                    "id": 403,
+                    "merchandiseHierarchyList": [],
+                    "name": "Page 8",
+                    "pageHeight": 11,
+                    "pageWidth": 8.5,
+                    "unit": 1,
+                    "versionMarketIdList": [
+                        1086,
+                        1087,
+                        1088,
+                        1089,
+                        1090,
+                        1091,
+                        1092,
+                        1093,
+                        1094,
+                        1095
+                    ]
+                },
+                "290": {
+                    "blockGroupMap": {},
+                    "permittedActions":{
+                        "add-to-basket":"Add to Basket",
+                        "dnd-create-version":null,
+                        "dnd-to-ab":null,
+                        "dnd-to-pl-ob":null,
+                        "allocate":null,
+                        "dnd-ab-to-pl":null,
+                        "upload":null,
+                        "plan":"Plan",
+                        "edit-allocation":"Edit Allocation",
+                        "edit-theme":null
+                    },    
+                     "description": "Base",
+                    "id": 404,
+                    "merchandiseHierarchyList": [],
+                    "name": "Page 9",
+                    "pageHeight": 11,
+                    "pageWidth": 8,
+                    "unit": 1,
+                    "versionMarketIdList": [
+                        1086,
+                        1087,
+                        1088,
+                        1089,
+                        1090,
+                        1091,
+                        1092,
+                        1093,
+                        1094,
+                        1095
+                    ]
+                },
+                "291": {
+                    "blockGroupMap": {},
+                    "permittedActions":{
+                        "add-to-basket":"Add to Basket",
+                        "dnd-create-version":null,
+                        "dnd-to-ab":null,
+                        "dnd-to-pl-ob":null,
+                        "allocate":null,
+                        "dnd-ab-to-pl":null,
+                        "upload":null,
+                        "plan":"Plan",
+                        "edit-allocation":"Edit Allocation",
+                        "edit-theme":null
+                    },    
+                    "description": "Base",
+                    "id": 408,
+                    "merchandiseHierarchyList": [],
+                    "name": "Page 10",
+                    "pageHeight": 11,
+                    "pageWidth": 8.5,
+                    "unit": 1,
+                    "versionMarketIdList": [
+                        1086,
+                        1087,
+                        1088,
+                        1089,
+                        1090,
+                        1091,
+                        1092,
+                        1093,
+                        1094,
+                        1095
+                    ]
+                }
+            }
+        },
+        "fileId": 0,
+        "success": true
+    }
+}

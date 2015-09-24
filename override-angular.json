@@ -1,0 +1,12 @@
+{
+    "main": "angular",
+    "shim": {
+        "angular": {
+            "deps": [ "jquery" ]
+        }
+    },
+    "registry": "jspm",
+    "dependencies": {
+        "jquery": "^2.1.4"
+    }
+}

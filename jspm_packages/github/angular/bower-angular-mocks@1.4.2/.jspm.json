@@ -1,0 +1,52 @@
+{
+  "name": "angular-mocks",
+  "version": "1.4.2",
+  "description": "AngularJS mocks for testing",
+  "main": "angular-mocks",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/angular/angular.js.git"
+  },
+  "keywords": [
+    "angular",
+    "framework",
+    "browser",
+    "mocks",
+    "testing",
+    "client-side"
+  ],
+  "author": "Angular Core Team <angular-core+npm@google.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/angular/angular.js/issues"
+  },
+  "homepage": "http://angularjs.org",
+  "jspm": {
+    "main": "angular-mocks",
+    "shim": {
+      "angular": {
+        "deps": [
+          "jquery"
+        ]
+      }
+    },
+    "registry": "jspm",
+    "dependencies": {
+      "jquery": "jspm:jquery@^2.1.4"
+    }
+  },
+  "shim": {
+    "angular": {
+      "deps": [
+        "jquery"
+      ]
+    }
+  },
+  "registry": "jspm",
+  "dependencies": {
+    "jquery": "jspm:jquery@^2.1.4"
+  }
+}

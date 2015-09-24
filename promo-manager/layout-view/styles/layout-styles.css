@@ -1,0 +1,291 @@
+/* layout-styles.less */
+[ng-cloak] {
+  display: none;
+}
+.layout-btn {
+  background: #428bca;
+  border: #357ebd solid 1px;
+  border-radius: 3px;
+  color: #fff;
+  display: inline-block;
+  font-size: 14px;
+  padding: 8px 15px;
+  text-decoration: none;
+  text-align: center;
+  min-width: 60px;
+  position: relative;
+  cursor: pointer;
+}
+.layout-btn:hover {
+  text-decoration: underline;
+  background: #357ebd;
+}
+.layout-btn.layout-btn-big {
+  font-size: 18px;
+  padding: 15px 20px;
+  min-width: 100px;
+}
+.layout-btn.layout-btn-cancel {
+  background: #42cac5;
+  border: #35bdb8 solid 1px;
+}
+.layout-btn.layout-btn-cancel:hover {
+  background: #35bdb8;
+}
+.layout-btn-close {
+  color: #aaaaaa;
+  font-size: 30px;
+  text-decoration: none;
+  position: absolute;
+  right: 5px;
+  top: 0;
+  cursor: pointer;
+}
+.layout-btn-close:hover {
+  color: #919191;
+  text-decoration: underline;
+}
+.layout-btn-delete {
+  color: #aaaaaa;
+  font-size: 17px;
+  text-decoration: none;
+}
+.layout-btn-delete:hover {
+  color: #919191;
+}
+.layout-modal-body {
+  padding: 20px;
+}
+.layout-modal-title {
+  font-size: 20px;
+}
+.layout-modal-header,
+.layout-modal-footer {
+  padding: 10px 20px;
+}
+.layout-modal-header {
+  border-bottom: #eeeeee solid 1px;
+}
+.layout-modal-header h2 {
+  font-size: 20px;
+}
+.layout-modal-footer {
+  border-top: #eeeeee solid 1px;
+  text-align: right;
+}
+.hyperlink {
+  color: blue;
+  text-decoration: underline;
+  cursor: pointer;
+}
+.hyperlink:hover {
+  color: #0000cc;
+}
+.clickable {
+  cursor: pointer;
+}
+body {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+#LayoutView {
+  position: absolute;
+  top: 50px;
+  bottom: 40px;
+  left: 0;
+  right: 0;
+  overflow: hidden;
+}
+#LayoutView * {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  cursor: default;
+}
+#LayoutView .viewport {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 10px;
+  right: 10px;
+  overflow: hidden;
+  background-color: #ffffff;
+  outline: 1px solid darkgray;
+}
+#LayoutView .viewport.noclip {
+  overflow: visible;
+}
+#LayoutView .card {
+  border: 1px solid red;
+  background-color: rgba(100, 100, 100, 0.8);
+  position: absolute;
+  width: 150px;
+  height: 50px;
+  z-index: 2147483647;
+  /* Math.pow(2, 32-1) - 1 */
+}
+#LayoutView .layoutview-pageversion {
+  position: absolute;
+  border: 1px solid blue;
+  background-color: rgba(200, 200, 200, 0.8);
+}
+#LayoutView .layoutview-header,
+#LayoutView .layoutview-footer {
+  width: 100%;
+  padding-right: 20px;
+  padding-left: 25px;
+}
+#LayoutView .layoutview-header ul,
+#LayoutView .layoutview-footer ul {
+  list-style-type: none;
+}
+#LayoutView .layoutview-header li,
+#LayoutView .layoutview-footer li {
+  padding-bottom: 3px;
+  font-size: 12px;
+  font-family: Arial, Helvetica, sans-serif;
+  display: inline-block;
+  padding-right: 10px;
+}
+#LayoutView .layoutview-header .filter-mhList > div,
+#LayoutView .layoutview-footer .filter-mhList > div {
+  display: inline-block;
+  margin-right: 4px;
+}
+#LayoutView .layoutview-header .filter-mhList > div select,
+#LayoutView .layoutview-footer .filter-mhList > div select {
+  min-width: 150px;
+}
+#LayoutView .layoutview-footer {
+  position: absolute;
+  bottom: 0;
+}
+#LayoutView .pageversion-grip,
+#LayoutView .block-grip,
+#LayoutView .offer-grip {
+  border: 1px solid blue;
+  position: absolute;
+}
+#LayoutView .pageversion-grip .grip-row,
+#LayoutView .block-grip .grip-row,
+#LayoutView .offer-grip .grip-row {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+#LayoutView .pageversion-grip .grip-content,
+#LayoutView .block-grip .grip-content,
+#LayoutView .offer-grip .grip-content {
+  position: absolute;
+  left: 0;
+  right: 30%;
+  height: 100%;
+}
+#LayoutView .pageversion-grip .grip-menu,
+#LayoutView .block-grip .grip-menu,
+#LayoutView .offer-grip .grip-menu {
+  position: absolute;
+  left: 70%;
+  right: 0;
+  height: 100%;
+  text-align: right;
+}
+#LayoutView .pageversion-grip .grip-menu span,
+#LayoutView .block-grip .grip-menu span,
+#LayoutView .offer-grip .grip-menu span {
+  padding-right: 3px;
+}
+#LayoutView .pageversion-grip .grip-menu .grip-menu-items,
+#LayoutView .block-grip .grip-menu .grip-menu-items,
+#LayoutView .offer-grip .grip-menu .grip-menu-items {
+  background-color: white;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  box-shadow: -1px 1px 2px rgba(0, 0, 0, 0.25);
+  border-radius: 2px 2px 2px 2px;
+  border: 1px solid #ddd;
+}
+#LayoutView .pageversion-grip .grip-menu .grip-menu-items > div,
+#LayoutView .block-grip .grip-menu .grip-menu-items > div,
+#LayoutView .offer-grip .grip-menu .grip-menu-items > div {
+  padding: 2px 10px;
+  text-align: right;
+  white-space: nowrap;
+}
+#LayoutView .pageversion-grip .grip-menu .grip-menu-items > div:hover,
+#LayoutView .block-grip .grip-menu .grip-menu-items > div:hover,
+#LayoutView .offer-grip .grip-menu .grip-menu-items > div:hover {
+  background-color: #f6f6f6;
+}
+#LayoutView .block-grip,
+#LayoutView .offer-grip {
+  border: 1px solid blue;
+  height: 10%;
+  width: 100%;
+}
+#LayoutView .offer-grip {
+  position: fixed;
+  top: 10%;
+}
+#LayoutView .layoutview-block {
+  position: absolute;
+  border: 1px solid gold;
+}
+#LayoutView .layoutview-block .block-offer-grip {
+  position: fixed;
+  top: 20%;
+  white-space: wrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+#LayoutView .layoutview-block .block-offer-grip.drag-handle {
+  cursor: grab;
+  cursor: -moz-grab;
+  cursor: -webkit-grab;
+}
+#LayoutView .layoutview-block .block-offer-grip.drag-handle:active {
+  cursor: grabbing;
+  cursor: -moz-grabbing;
+  cursor: -webkit-grabbing;
+}
+#LayoutView .object-disabled {
+  color: grey;
+  background-color: rgba(0, 0, 0, 0.2);
+  pointer-events: none;
+}
+#LayoutView .object-disabled img {
+  filter: gray;
+  -webkit-filter: grayscale(100%);
+  -moz-filter: grayscale(100%);
+  filter: grayscale(100%);
+}
+.layout-modal-body .small-input {
+  width: 50px;
+}
+.layout-modal-body .msg {
+  font-size: 18px;
+}
+.layout-modal-body .info-line {
+  font-size: 12px;
+}
+.layout-modal-body .item-search-ul {
+  list-style: none;
+}
+.layout-modal-body .item-search-li {
+  margin-left: 1px;
+}
+.layout-modal-body .selectedItem {
+  background-color: #b4bdc8;
+  border-radius: 6px;
+}
+.layout-modal-body .searchedItem {
+  background-color: #e1edfa;
+  border-radius: 6px;
+}
+.toast-bottom-right {
+  left: 100px;
+  top: 200px;
+}

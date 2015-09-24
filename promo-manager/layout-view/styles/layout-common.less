@@ -1,0 +1,212 @@
+body {
+	width: 100%;
+	height: 100%;
+	padding: 0;
+	margin: 0;
+}
+
+#LayoutView {
+	// width: 100%;
+	// height: 100%;
+	position: absolute;
+	top: 50px;
+	bottom: 40px;
+	left: 0;
+	right: 0;
+	overflow: hidden;
+
+	* {
+		box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		-webkit-box-sizing: border-box;
+		cursor: default;
+	}
+	.viewport {
+		position: absolute;
+		// top: 12%;
+		// left: 10%;
+		// width: 80%;
+		// height: 80%;
+		top: 0;
+		bottom: 0;
+		left: 10px;
+		right: 10px;
+		overflow: hidden;
+		background-color: @layoutViewViewportBackground;
+		outline: 1px solid darkgray;
+
+		&.noclip {   // FOR DEBUG
+			overflow: visible;
+		}
+	}
+	.card {
+		border: 1px solid @layoutViewCardBorderColor;
+		background-color: @layoutViewCardBackgroundColor;
+		position: absolute;
+		width: 150px;
+		height: 50px;
+		z-index: 2147483647;  /* Math.pow(2, 32-1) - 1 */
+	}
+	.layoutview-pageversion {
+		position: absolute;
+		border: 1px solid @layoutViewPageBorderColor;
+		background-color: @layoutViewPageBackgroundColor;
+	}
+	.layoutview-header, .layoutview-footer{
+		width: 100%;
+		padding-right: 20px;
+		padding-left: 25px;
+		ul {
+		    list-style-type: none;
+		}
+		li {
+			padding-bottom: 3px;
+			font-size: 12px;
+			font-family: Arial, Helvetica, sans-serif;
+			display:inline-block;
+			padding-right: 10px;			
+		}
+
+
+		.filter-mhList {
+
+			> div {
+				display: inline-block;
+				margin-right: 4px;
+
+				select {
+					min-width: 150px;
+				}
+			}
+		}
+	}
+	.layoutview-footer{
+		position: absolute;
+		bottom: 0;
+	}
+
+	.pageversion-grip, .block-grip, .offer-grip{
+		border: 1px solid @layoutViewPageGripBorderColor;
+		position: absolute;
+		.grip-row {
+			position: absolute;
+			width:100%;
+			height: 100%;
+		}
+		.grip-content {
+			position: absolute;
+			left: 0;
+			right: 30%;
+			height: 100%;
+		}
+		.grip-menu {
+			position: absolute;
+			left: 70%;
+			right: 0;
+			height: 100%;
+			text-align: right;
+
+			span {
+				padding-right: 3px;
+			}
+
+			.grip-menu-items {
+				background-color: @gripMenuItemsBackgroundColor;
+				position: absolute;
+				top: 100%;
+				right: 0;
+				box-shadow: -1px 1px 2px rgba(0, 0, 0, 0.25);
+				border-radius: 2px 2px 2px 2px;
+				border: 1px solid #ddd;
+
+				> div {
+					padding: 2px 10px;
+					text-align: right;
+					white-space: nowrap;
+
+					&:hover {
+						background-color: @layoutViewContextMenuBackgroundCurrentItemHover;
+					}
+				}
+			}
+
+		}
+	}
+	.block-grip, .offer-grip{
+
+		border: 1px solid @layoutViewPageGripBorderColor;
+		height: 10%;
+		width: 100%;
+
+	}
+	.offer-grip{
+		position: fixed;
+		top: 10%;
+
+	}
+
+	.layoutview-block {
+		position: absolute;
+		border: 1px solid @layoutViewBlockBorderColor;
+		// background-color is defined by block settings in data
+		.block-offer-grip {
+			position: fixed;
+			top: 20%;
+			white-space: wrap;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			&.drag-handle {
+			    cursor: grab;
+			    cursor: -moz-grab;
+			    cursor: -webkit-grab;
+			}
+			&.drag-handle:active {
+			    cursor: grabbing;
+			    cursor: -moz-grabbing;
+			    cursor: -webkit-grabbing;
+			}
+		}
+	}
+	.object-disabled {
+		color:@layoutViewDisabledColor;
+		background-color:@layoutViewDisabledBackgroundColor;
+		pointer-events:none;//ie 10
+		img {    
+		   filter:gray;
+		   -webkit-filter:grayscale(100%);
+		   -moz-filter:grayscale(100%);    
+		   filter:grayscale(100%);
+		}
+	}
+
+}
+.layout-modal-body{
+	.small-input{
+		width: 50px;
+	}
+	.msg{
+		font-size: 18px;
+	}
+	.info-line{
+		font-size: 12px;
+	}
+	.item-search-ul {
+    	list-style: none;
+	}
+	.item-search-li {
+	    margin-left: 1px;
+	}
+	.selectedItem {
+		background-color:@selectedItemBackgroundColor;
+		border-radius: 6px;
+	}
+	.searchedItem {
+		background-color:@searchItemBackgroundColor;
+		border-radius: 6px;
+	}
+
+}
+.toast-bottom-right {
+  	left: 100px;
+  	top: 200px;
+}	

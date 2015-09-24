@@ -1,0 +1,115 @@
+{
+  "data": {
+    "channelConfigList": [
+      {
+        "channel": {
+          "channelType": null,
+          "codeName": null,
+          "color": null,
+          "description": null,
+          "id": 30,
+          "name": null,
+          "scheme": null,
+          "status": null
+        },
+        "defaultMaxItems": 25,
+        "exclusionGroupList": [
+          {
+            "channelId": null,
+            "exclusionList": [
+              {
+                "exclusionId": 2,
+                "merchandiseHierarchy": {
+                  "code": null,
+                  "deleteTs": null,
+                  "description": null,
+                  "id": 20,
+                  "leftBoundary": 0,
+                  "level": 0,
+                  "name": null,
+                  "rightBoundary": 0,
+                  "type": null
+                }
+              },
+              {
+                "exclusionId": 1,
+                "merchandiseHierarchy": {
+                  "code": null,
+                  "deleteTs": null,
+                  "description": null,
+                  "id": 105,
+                  "leftBoundary": 0,
+                  "level": 0,
+                  "name": null,
+                  "rightBoundary": 0,
+                  "type": null
+                }
+              }
+            ],
+            "groupId": 1,
+            "maxFeatureItems": 16,
+            "vehicleVersionId": null
+          },
+          {
+            "channelId": null,
+            "exclusionList": [
+              {
+                "exclusionId": 3,
+                "merchandiseHierarchy": {
+                  "code": null,
+                  "deleteTs": null,
+                  "description": null,
+                  "id": 18,
+                  "leftBoundary": 0,
+                  "level": 0,
+                  "name": null,
+                  "rightBoundary": 0,
+                  "type": null
+                }
+              },
+              {
+                "exclusionId": 4,
+                "merchandiseHierarchy": {
+                  "code": null,
+                  "deleteTs": null,
+                  "description": null,
+                  "id": 116,
+                  "leftBoundary": 0,
+                  "level": 0,
+                  "name": null,
+                  "rightBoundary": 0,
+                  "type": null
+                }
+              },
+              {
+                "exclusionId": 5,
+                "merchandiseHierarchy": {
+                  "code": null,
+                  "deleteTs": null,
+                  "description": null,
+                  "id": 199,
+                  "leftBoundary": 0,
+                  "level": 0,
+                  "name": null,
+                  "rightBoundary": 0,
+                  "type": null
+                }
+              }
+            ],
+            "groupId": 2,
+            "maxFeatureItems": 20,
+            "vehicleVersionId": null
+          }
+        ],
+        "userId": null
+      }
+    ]
+  },
+  "dataAsString": "{\"channelConfigList\":[{\"channel\":{\"id\":30},\"defaultMaxItems\":25,\"exclusionGroupList\":[{\"groupId\":1,\"exclusionList\":[{\"exclusionId\":2,\"merchandiseHierarchy\":{\"leftBoundary\":0,\"rightBoundary\":0,\"level\":0,\"id\":20}},{\"exclusionId\":1,\"merchandiseHierarchy\":{\"leftBoundary\":0,\"rightBoundary\":0,\"level\":0,\"id\":105}}],\"maxFeatureItems\":16},{\"groupId\":2,\"exclusionList\":[{\"exclusionId\":3,\"merchandiseHierarchy\":{\"leftBoundary\":0,\"rightBoundary\":0,\"level\":0,\"id\":18}},{\"exclusionId\":4,\"merchandiseHierarchy\":{\"leftBoundary\":0,\"rightBoundary\":0,\"level\":0,\"id\":116}},{\"exclusionId\":5,\"merchandiseHierarchy\":{\"leftBoundary\":0,\"rightBoundary\":0,\"level\":0,\"id\":199}}],\"maxFeatureItems\":20}]}]}",
+  "fileId": 0,
+  "id": 0,
+  "message": null,
+  "messageKeys": null,
+  "name": null,
+  "success": true
+}

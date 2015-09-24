@@ -1,0 +1,1 @@
+module.exports = require("npm:gl-matrix@2.3.1/src/gl-matrix");

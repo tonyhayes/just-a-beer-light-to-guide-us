@@ -1,0 +1,59 @@
+<script type="text/ng-template"  id="tree_item_selection_renderer.html">
+	<div ng-if="data.name">
+	    <button ng-click="ctrl.open(data)" ng-if="data.childIdList.length > 0" ng-hide="data.nodes.length > 0">+</button>
+	    <button ng-click="ctrl.delete(data)" ng-if="data.childIdList.length > 0" ng-show="data.nodes.length > 0">-</button>
+	    	<span ng-click="ctrl.itemSelection(data)" ng-class="{searchedItem:data.searched, selectedItem:ctrl.isSelectedItem(data)}">{{::data.name}}</span>
+	</div>
+    <ul class="item-search-ul">
+        <li class="item-search-li" ng-repeat="data in data.nodes" ng-include="'tree_item_selection_renderer.html'">
+	    </li>
+    </ul>
+</script>
+
+<div class="layout-modal-header">
+    <div class="layout-modal-title" translate="ITEM_SEARCH_TITLE"></div>
+    <div ng-click="ctrl.dismiss()" class="layout-btn-close">&times;</div>
+    <div class="layout-modal-body">
+	    <div>
+	    	<span ng-repeat="label in ctrl.defaultLabels">
+	      		<input type="text" ng-model="ctrl.search.itemSearch[$index]" ng-model-options="{updateOn: 'default blur',debounce: {default: 500, blur: 0}, getterSetter: true, allowInvalid: true}" placeholder={{::label}}>
+      		</span>
+	    </div>
+
+		<ul class="item-search-ul">
+		    <li class="item-search-li" ng-repeat="data in ctrl.itemTree" ng-include="'tree_item_selection_renderer.html'"></li>
+		</ul>
+	    <!--  table -->
+	    <div ng-if="ctrl.itemSelections.length">
+	        <table class="table table-bordered table-striped">
+	            <tr>
+	                <th colspan="5">
+	                    <div class="pull-left" translate="ITEM_SEARCH_SELECTED_ITEMS_LABEL"></div>
+	                    &nbsp;{{ctrl.itemSelections.length}}
+	                </th>
+	            </tr>
+	            <tr>
+	                <th ng-repeat="label in ctrl.defaultLabels">{{::label}}</th>
+	                <th translate="ITEM_SEARCH_NAME_ITEMS_LABEL"></th>
+	                <th class="layout-btn-delete">&times;</th>
+	            </tr>
+	            <tr ng-repeat="item in ctrl.itemSelections track by $index">
+	                <td ng-repeat=" id in item.ids track by $index">
+	                	<span class="hyperlink" ng-click="ctrl.openSelection(item)">{{id}}</span>
+	                </td>
+	                <td>
+	                	<span class="hyperlink" ng-click="ctrl.openSelection(item)">{{item.name}}</span>
+	                </td>
+	                <td>
+		                <span ng-click="ctrl.deleteSelection(item)" class="layout-btn-delete hyperlink">&times;</span>
+	                </td>
+	            </tr>
+	        </table>
+	    </div>
+
+    </div>
+    <div class="layout-modal-footer">
+        <span ng-click="ctrl.dismiss()" class="layout-btn layout-btn-cancel" translate="LAYOUT_VIEW_MODAL_BUTTON_CLOSE"></span> 
+        <span ng-click="ctrl.close()" class="layout-btn" translate="LAYOUT_VIEW_MODAL_BUTTON_OK"></span> 
+    </div>
+</div>

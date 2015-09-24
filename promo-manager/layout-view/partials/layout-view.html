@@ -1,0 +1,81 @@
+<div id="layout-viewport" ng-if="ctrl.layoutView.done" class="viewport noclip" tabindex="-1" layout-view-input="ctrl.handleInputs($event)" layout-view-events="ctrl.inputEvents" >
+	<div class="layoutview-header">
+		<ul>
+			<li>
+				<select ng-options="version.id as version.name for version in ctrl.layoutView.vehicleVersions"
+				  ng-model="ctrl.layoutView.selectedVehicleVersion.id"
+				  ng-change="ctrl.updateSelectedVehicleVersion(ctrl.layoutView.selectedVehicleVersion.id)"
+				>
+				</select>
+			</li>
+			<li>
+				<select ng-options="version as version for version in ctrl.layoutView.layoutModel.getLayoutVersionIdList()"
+				  ng-model="ctrl.layoutView.selectedLayoutVersionId"
+				  ng-change="ctrl.updateSelectedLayoutVersion(ctrl.layoutView.selectedLayoutVersionId)"
+				>
+				</select>
+			</li>
+
+			<li>
+				<div merchandise-hierarchy-native-selection
+				  ng-model="ctrl.merchandiseHierarchyId"
+				  tree-map="ctrl.layoutView.merchandiseHierarchy"
+				  default-labels="ctrl.merchandiseHierarchySelectionLabelFilters"
+				  class="filter-mhList"
+				>
+				</div>
+			</li>
+		</ul>
+	</div>
+	<div class="card" ng-style="ctrl.cardObject._cameraSpaceStyles" ng-if="ctrl.cardObject">card: {{ctrl.cardObject.src.offerVersion.id}}</div>
+	<div ng-repeat-start="pageVersion in ctrl.getPagesInViewport()"></div>
+	<div ng-switch="pageVersion.type">
+		<div ng-switch-when="page">
+			<div class="layoutview-pageversion" ng-class="{'object-disabled': ctrl.isDisabled(pageVersion)}"  ng-style="pageVersion._cameraSpaceStyles"></div>
+		</div>
+		<div ng-switch-when="page-grip">
+			<div class="pageversion-grip" ng-class="{'object-disabled': ctrl.isDisabled(pageVersion)}" ng-style="pageVersion._cameraSpaceStyles">
+				<div class="grip-row">
+					<div class="grip-content">
+						PV id: {{pageVersion.pageVersion.id}}
+						{{pageVersion.header}}
+					</div>
+					<div class="grip-menu" toggle-state="pageVersion.open" toggle-unique="true">
+						<span>Menu</span>
+						<div ng-show="pageVersion.open" class="grip-menu-items">
+						    <div class="hyperlink" ng-repeat="action in pageVersion.pageVersion.permittedActions" ng-if="action.name" ng-click="ctrl.getPageVersionModalHandler(action.id, pageVersion.pageVersion)">{{action.name}}
+						    </div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div ng-repeat-end ng-repeat="block in pageVersion.blockList" ng-class="{'object-disabled': ctrl.isDisabled(block)}" class="layoutview-block" ng-style="block._cameraSpaceStyles">
+		<div class="block-grip">
+			<div class="grip-row">
+				<div class="grip-content">
+					B: {{block.id}} 
+				</div>
+				<div class="grip-menu" toggle-state="block.open" toggle-unique="true">
+				  	<span>bm</span>
+				    <div ng-show="block.open" class="grip-menu-items">
+					    <div class="hyperlink" ng-repeat="action in block.permittedActions" ng-if="action.name" ng-click="ctrl.getBlockModalHandler(action.id, block, pageVersion)">{{action.name}}
+					    </div>
+			    	</div>
+				</div>
+			</div>
+		</div>
+		<span ng-class="{'object-disabled': ctrl.isDisabled(block.offerVersion)}"  ng-if="block.offerVersion">
+			<div class="block-offer-grip drag-handle">
+				{{block.offerVersion.hierarchyId | merchandiseHierarchyNodePath:ctrl.layoutView.merchandiseHierarchy}}
+			</div>
+		</span>
+	</div>
+	<div class="layoutview-footer">
+		<ul>  
+		    <li class="layout-btn" ng-repeat="action in ctrl.layoutView.layoutModel.permittedActions" ng-if="action.name" ng-click="ctrl.getPageModalHandler(action.id)">{{action.name}}
+		    </li>
+		</ul>
+	</div>
+</div>

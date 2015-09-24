@@ -1,0 +1,13 @@
+<div dropdown class="btn-group" ng-repeat="dropdown in ctrl.dropdowns">
+	<div dropdown-toggle class="btn" ng-class="{'disabled': disableSelection}">
+		<div>{{ctrl.getSelectedName($index)}}</div>
+		<b class="caret"></b>
+	</div>
+	<ul class="dropdown-menu">
+		<li ng-repeat="option in dropdown" ng-class="{ 'selected': ngModel == option.id }">
+			<a ng-click="ctrl.updateModel(option.id)">
+				{{option.name}}
+			</a>
+		</li>
+	</ul>
+</div>

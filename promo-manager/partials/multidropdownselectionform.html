@@ -1,0 +1,22 @@
+<div class="dropdown" ng-repeat="dropdown in ctrl.dropdowns">
+	<div class="clearfix formSection">
+		<div class="formFloated01 single-line edit-offerslist-row">
+			<div class="formFloatedWrapper">
+				<h3>{{ formLabels[$index] }}</h3>
+				<div class="data text noMargin">
+					<div class="dropdown-toggle btn" data-toggle="dropdown" ng-class="{'disabled': disableSelection}">
+						<div>{{ ctrl.getSelectedName($index) }} <b class="caret pull-right"></b></div>
+					</div>
+					<ul class="dropdown-menu">
+						<li ng-repeat="option in dropdown" ng-class="{ 'selected': ngModel == option.id }">
+							<a ng-click="ctrl.updateModel(option.id)">
+								{{ option.name }}
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+

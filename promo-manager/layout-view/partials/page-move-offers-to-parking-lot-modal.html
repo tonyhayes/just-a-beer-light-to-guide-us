@@ -1,0 +1,26 @@
+<div class="layout-modal-header">
+    <div class="layout-modal-title">{{::ctrl.title}}</div>
+    <div ng-click="ctrl.dismiss()" class="layout-btn-close">&times;</div>
+    <div class="layout-modal-body">
+        <span class="msg" translate="LAYOUT_VIEW_MOVE_OFFERS_TO_PARKING_LOT"></span>
+    </div>
+    <div class="layout-modal-body">
+        <div>
+        	{{::'LAYOUT_VIEW_PAGES_NAME_COLUMN'|translate}}:&nbsp;
+            {{::ctrl.name}}
+        </div>
+        <div>
+        	{{::'LAYOUT_VIEW_PAGES_HEIGHT_COLUMN'|translate}}:&nbsp;
+            {{::ctrl.h}}
+        </div>
+        <div>
+        	{{::'LAYOUT_VIEW_PAGES_WIDTH_COLUMN'|translate}}:&nbsp;
+            {{::ctrl.w}}
+        </div>
+    </div>
+
+    <div class="layout-modal-footer">
+        <span ng-click="ctrl.dismiss()" class="layout-btn layout-btn-cancel" translate="LAYOUT_VIEW_MODAL_BUTTON_CLOSE"></span> 
+        <span ng-click="ctrl.apply()" class="layout-btn" translate="LAYOUT_VIEW_MODAL_BUTTON_OK"></span> 
+    </div>
+</div>

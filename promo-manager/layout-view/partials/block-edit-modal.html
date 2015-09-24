@@ -1,0 +1,34 @@
+<div class="layout-modal-header">
+    <div class="layout-modal-title">{{::ctrl.title}}</div>
+    <div ng-click="ctrl.dismiss()" class="layout-btn-close">&times;</div>
+    <div class="layout-modal-body">
+        <label>{{::'LAYOUT_VIEW_BLOCK_EDIT_USER_DEFINED_NAME' | translate}}</label>
+        <input type="text" ng-model="ctrl.userDefinedName" required>
+    </div>
+    <div class="layout-modal-body">
+        <label>
+            <input type="checkbox" ng-checked="ctrl.isCoop" ng-model="ctrl.isCoop"/> {{::'LAYOUT_VIEW_PAGES_EDIT_PAGE_IS_COOP' | translate}}
+        </label>       
+    </div>
+    <div class="layout-modal-body">
+        <label>{{::'LAYOUT_VIEW_PAGES_EDIT_PAGE_THEME' | translate}}</label>
+        <input type="text" ng-model="ctrl.theme" required>
+    </div>
+    <div class="layout-modal-body">
+        <div merchandise-hierarchy-native-selection
+          ng-model="ctrl.hierarchyId"
+          tree-map="ctrl.layoutView.merchandiseHierarchy"
+          default-labels="ctrl.merchandiseHierarchySelectionLabels"
+        >
+        </div>
+    </div>
+    <div class="layout-modal-body">
+        <label>{{::'LAYOUT_VIEW_BLOCK_EDIT_COLOR' | translate}}</label>
+        <input type="text" ng-model="ctrl.color" required>
+    </div>
+
+    <div class="layout-modal-footer">
+        <span ng-click="ctrl.dismiss()" class="layout-btn layout-btn-cancel" translate="LAYOUT_VIEW_MODAL_BUTTON_CLOSE"></span> 
+        <span ng-click="ctrl.apply()" class="layout-btn" translate="LAYOUT_VIEW_MODAL_BUTTON_OK"></span> 
+    </div>
+</div>
